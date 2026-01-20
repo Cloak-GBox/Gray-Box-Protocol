@@ -1,0 +1,55 @@
+# Cloak vs. Legacy Mixers: The Evolution of Solana Privacy
+
+While both Cloak and legacy protocols like **Privacy Cash** (Tornado-style mixers) aim to provide on-chain privacy, they operate on fundamentally different technical architectures and philosophical foundations. This document outlines why Cloak's **Stealth Infrastructure** is the superior solution for the Solana ecosystem.
+
+---
+
+## 1. Architectural Difference: Mixing vs. Stealth
+
+| Feature | Privacy Cash (Mixer) | Cloak (Stealth Infrastructure) |
+| :--- | :--- | :--- |
+| **Logic** | **Anonymity Set Pool**: Users deposit funds into a shared pool and withdraw to a new address using ZK-proofs. | **Stealth Vaults**: Funds are sent to a unique, one-time-use address (PDA) derived from the recipient's keys. |
+| **Identity Link** | Breaks the link between Deposit and Withdrawal by "hiding in a crowd." | Breaks the link between Sender and Recipient by "hiding the destination." |
+| **Wait Time** | Requires waiting for a large "anonymity set" to ensure privacy. | **Immediate**. Privacy is achieved through cryptographic derivation, not pool size. |
+| **Amounts** | Fixed denominations (e.g., 1 SOL, 10 SOL, 100 SOL) to maintain set consistency. | **Flexible**. Any amount of SOL or SPL tokens can be sent to a stealth vault. |
+
+---
+
+## 2. "Blackbox" vs. "Graybox" Philosophy
+
+### Legacy Mixers: The "Blackbox"
+Historical privacy protocols were designed for total, permissionless anonymity. While providing absolute privacy, this **"Blackbox"** structure often attracts high-risk activity, leading to network-level sanctions and liquidity fragmentation. The origin of funds becomes completely untraceable once they enter the pool, making auditability nearly impossible.
+
+### Cloak: The "Graybox"
+Cloak introduces the concept of **Professional Privacy** or **"Graybox"** isolation:
+- **Targeted Privacy**: It doesn't aim to hide that *a* transaction occurred; it hides *who* received it and the *state* of their primary balance.
+- **Institutional Ready**: Cloak is designed for legitimate users (high-net-worth individuals, DAO treasuries, enterprises) who need to protect their financial data from public surveillance and phishing.
+- **Selective Auditability**: Using **Viewing Keys**, users can selectively share transaction history with authorized parties without exposing their spending authority.
+
+---
+
+## 3. Solana-Native UX and 2026 Standards
+
+Legacy mixers are often clunky and require multiple transactions. Cloak is built for the **Solana 2026** paradigm:
+- **Blinks & Actions**: Execute a stealth transfer directly via a social link (Blink) without leaving your feed.
+- **PDA-First Design**: Leveraging Solana's **Program Derived Addresses** to create temporary "smart vaults" that exist only for the duration of the transfer.
+- **Web3.js v2 Integration**: Modular and lightning-fast cryptographic operations handled within the browser extension.
+
+---
+
+## 4. The Relayer Network: Air-Gapped Claims
+
+In legacy mixers, users often faced a "chicken and egg" problem: needing SOL to pay gas for a withdrawal.
+
+In **Cloak**, the **Relayer Network** is a professionalized service layer:
+- **Rent Rebate**: Relayers handle the claim and receive the vault's rent exemption as part of their fee.
+- **Complete Isolation**: The recipient's main wallet never interacts with the stealth vault to fund the transaction, providing an **air-gapped** claim process that preserves privacy.
+
+---
+
+## Summary
+
+**Privacy Cash** is a **Mixer** designed for anonymity through pooling.
+**Cloak** is a **Privacy Pipeline** designed for secure, decoupled transfers using stealth addresses.
+
+Cloak represents the next generation of privacy: it is **Solana-optimized**, faster, flexible, and architecturally aligned with the needs of a professional financial ecosystem.
