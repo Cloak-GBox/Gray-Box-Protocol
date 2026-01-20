@@ -15,16 +15,17 @@ While both Cloak and legacy protocols like **Privacy Cash** (Tornado-style mixer
 
 ---
 
-## 2. "Blackbox" vs. "Graybox" Philosophy
+### 2. "Blackbox" vs. "Graybox": 5 Key Differences
 
-### Legacy Mixers: The "Blackbox"
-Historical privacy protocols were designed for total, permissionless anonymity. While providing absolute privacy, this **"Blackbox"** structure often attracts high-risk activity, leading to network-level sanctions and liquidity fragmentation. The origin of funds becomes completely untraceable once they enter the pool, making auditability nearly impossible.
+The shift from Blackbox (Legacy) to Graybox (Cloak) represents a move towards professional-grade financial security.
 
-### Cloak: The "Graybox"
-Cloak introduces the concept of **Professional Privacy** or **"Graybox"** isolation:
-- **Targeted Privacy**: It doesn't aim to hide that *a* transaction occurred; it hides *who* received it and the *state* of their primary balance.
-- **Institutional Ready**: Cloak is designed for legitimate users (high-net-worth individuals, DAO treasuries, enterprises) who need to protect their financial data from public surveillance and phishing.
-- **Selective Auditability**: Using **Viewing Keys**, users can selectively share transaction history with authorized parties without exposing their spending authority.
+| # | Feature | **Blackbox (Legacy Mixers)** | **Graybox (Cloak Infrastructure)** |
+| :--- | :--- | :--- | :--- |
+| **1** | **Primary Goal** | **Total Anonymity**: Hiding the entire trail of money from all parties. | **Data Protection**: Shielding the user's main wallet and wealth from public eyes. |
+| **2** | **Auditability** | **None**: No way to prove the origin of funds without revealing the master secret. | **Selective**: Use of **Viewing Keys** allows auditing without giving up control of funds. |
+| **3** | **Network Risk** | **High**: Pools often attract "tainted" funds, leading to global sanctions. | **Low**: P2P stealth transfers prevent the "dirty pool" effect; no shared liquidity. |
+| **4** | **Speed & Cost** | **Slow/Expensive**: Heavy ZK-proofs and waiting for anonymity sets. | **Instant/Cheap**: Low-latency PDA derivation and direct Solana-native transfers. |
+| **5** | **User Intent** | **Hiding Identity**: Ideal for those seeking absolute untraceability. | **Financial Privacy**: Ideal for professionals, whales, and DAOs needing operational security. |
 
 ---
 
